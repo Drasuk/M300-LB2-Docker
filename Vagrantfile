@@ -38,5 +38,9 @@ Vagrant.configure("2") do |config|
   end
   config.vm.provision "shell", inline: <<-SHELL
   sudo apt-get install docker-compose -y
+  cd ..
+  cd ..
+  cd vagrant
+  docker-compose up -d
   SHELL
 end
