@@ -7,7 +7,7 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "ubuntu/bionic64"
 
   # Create forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. 
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
 
   # Docker Provisioner
   config.vm.provision "docker" do |d|
-   d.pull_images "ubuntu:14.04"
+   d.pull_images "ubuntu:18.04"
   end
   config.vm.provision "shell", inline: <<-SHELL
   sudo apt-get install docker-compose -y
