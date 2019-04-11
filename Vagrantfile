@@ -36,4 +36,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "docker" do |d|
    d.pull_images "ubuntu:14.04"
   end
+  config.vm.provision "shell", inline: <<-SHELL
+  sudo apt-get install docker-compose -y
+  SHELL
 end
