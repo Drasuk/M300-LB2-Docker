@@ -24,9 +24,13 @@ Schritt 1 ist natrülich das Git Repository auf den lokalen Host zu kopieren. (V
 
 Um die Dienste erfolgreich benutzen zu können, sollte man im Vagrant File die IP der VM nach Wunsch ändern. (Möglicherweise auf Bridge umstellen). Danach sollte man im Docker-Compose File den Benutzernamen, Passwort und Rootpasswort für die Datenbank ab ändern. Beachtet muss werden, dass die Änderung im Wordpress Service nachgetragen werden muss.
 
-Standardname und Passwort sind: <br>
+DB Standardname und Passwort sind: <br>
   - Name = dbuser <br>
   - Passwort = Hallo1234
+
+Linux ubuntu Standardname und Passwort sind: <br>
+  - Name = vagrant <br>
+  - Passwort = vagrant
 
 Finaler Schritt ist es mit einer Konsole wie Git Bash. Im Repository Verzeichnis, den Befehl vagrant up auszuführen.
 Die Installation dauert eine Weile und anschliessend können die Dienste wie folgt erreicht werden:
