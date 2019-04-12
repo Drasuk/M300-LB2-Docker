@@ -24,22 +24,22 @@ Schritt 1 ist natrülich das Git Repository auf den lokalen Host zu kopieren. (V
 
 Um die Dienste erfolgreich benutzen zu können, sollte man im Vagrant File die IP der VM nach Wunsch ändern. (Möglicherweise auf Bridge umstellen). Danach sollte man im Docker-Compose File den Benutzernamen, Passwort und Rootpasswort für die Datenbank ab ändern. Beachtet muss werden, dass die Änderung im Wordpress Service nachgetragen werden muss.
 
-Standardname und Passwort sind:
-  Name = dbuser
+Standardname und Passwort sind: <br>
+  Name = dbuser <br>
   Passwort = Hallo1234
 
 Finaler Schritt ist es mit einer Konsole wie Git Bash. Im Repository Verzeichnis, den Befehl vagrant up auszuführen.
 Die Installation dauert eine Weile und anschliessend können die Dienste wie folgt erreicht werden:
 
-Wordpress Seite anzeigen: http://ip_des_Computers:8000
-(Bei der ersten Öffnung muss noch die Erstinstallation vorgenommen werden. Name, Passwort, E-Mail und Websitenamen eintragen)
-Wordpress Admin Account: http://ip_des_Computers:8000/wp-admin
-PHPMyAdmin Interface: http://ip_des_Computers:8080 (Username und Passwort welche man vorhin geändert hat.
+Wordpress Seite anzeigen: http://ip_des_Computers:8000 <br>
+(Bei der ersten Öffnung muss noch die Erstinstallation vorgenommen werden. Name, Passwort, E-Mail und Websitenamen eintragen) <br>
+Wordpress Admin Account: http://ip_des_Computers:8000/wp-admin <br>
+PHPMyAdmin Interface: http://ip_des_Computers:8080 (Username und Passwort welche man vorhin geändert hat. <br>
 ## Testing
-Getestet können die Dienste folgendermassen:
-Auf Webinterfaces Zugreifen
-Datenbank User erstellen, löschen. Container neustartetn, DB kontrollieren ob die Dateien immernoch vorhanden sind.
+Getestet können die Dienste folgendermassen: <br>
+Auf Webinterfaces Zugreifen <br>
+Datenbank User erstellen, löschen. Container neustartetn, DB kontrollieren ob die Dateien immernoch vorhanden sind. 
 ## Troubleshooting Stepps (optional)
-Mögliche Probleme können entstehen:
-  - Netzwerk (Kontrollieren sie wie die Netzwerkkonfiguration ist.
+Mögliche Probleme können entstehen: <br>
+  - Netzwerk (Kontrollieren sie wie die Netzwerkkonfiguration ist. <br>
   - Versions Probleme (Bei neueren Versionen gibt es möglicherweise Änderungen welche diese Konfiguration nicht mehr ermöglichen)
