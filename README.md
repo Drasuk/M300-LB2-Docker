@@ -9,7 +9,7 @@ In der LB2 ging es darum einen Dienst mit Docker zur Verfügung zu stellen.
 * Projekt auf github Ablegen und Dokumentieren (Markdown) (Note 5.5 – 6.0)
 
 ## Beschrieb des Service
-Unser Service besteht aus 3 verknüpften Container. Einem Wordpress, MySQL und PHPMyAdmin Server. Der Service soll die Erstellung einer Webumgebung ersparen bzw. vereinfachen. Die 3 Services wurden mit einem Docker-Compose file kreeiert und wird mittels vagrantfile ausgeführt.
+Unser Service besteht aus 3 verknüpften Container. Einem Wordpress, MySQL und PHPMyAdmin Server. Der Service soll die Erstellung einer Webumgebung ersparen bzw. vereinfachen. Die 3 Services wurden mit einem Docker-Compose file kreeiert und wird mittels vagrantfile ausgeführt. Die Services besitzen natrülich ein stetiges Volume welches erhalten bleibt.
 
 ## Technische Angaben inkl. Plan und Anleitung für den Betrieb
 
@@ -19,6 +19,27 @@ Unser Service besteht aus 3 verknüpften Container. Einem Wordpress, MySQL und P
 
 _Gelb = Netzwerk Zone der 3 Containers_
 
-## Testing
+**Betrieb**
+Schritt 1 ist natrülich das Git Repository auf den lokalen Host zu kopieren. (Via git Clone oder als .zip)
 
+Um die Dienste erfolgreich benutzen zu können, sollte man im Vagrant File die IP der VM nach Wunsch ändern. (Möglicherweise auf Bridge umstellen). Danach sollte man im Docker-Compose File den Benutzernamen, Passwort und Rootpasswort für die Datenbank ab ändern. Beachtet muss werden, dass die Änderung im Wordpress Service nachgetragen werden muss.
+
+Standardname und Passwort sind:
+  Name = dbuser
+  Passwort = Hallo1234
+
+Finaler Schritt ist es mit einer Konsole wie Git Bash. Im Repository Verzeichnis, den Befehl vagrant up auszuführen.
+Die Installation dauert eine Weile und anschliessend können die Dienste wie folgt erreicht werden:
+
+Wordpress Seite anzeigen: http://ip_des_Computers:8000
+(Bei der ersten Öffnung muss noch die Erstinstallation vorgenommen werden. Name, Passwort, E-Mail und Websitenamen eintragen)
+Wordpress Admin Account: http://ip_des_Computers:8000/wp-admin
+PHPMyAdmin Interface: http://ip_des_Computers:8080 (Username und Passwort welche man vorhin geändert hat.
+## Testing
+Getestet können die Dienste folgendermassen:
+Auf Webinterfaces Zugreifen
+Datenbank User erstellen, löschen. Container neustartetn, DB kontrollieren ob die Dateien immernoch vorhanden sind.
 ## Troubleshooting Stepps (optional)
+Mögliche Probleme können entstehen:
+  - Netzwerk (Kontrollieren sie wie die Netzwerkkonfiguration ist.
+  - Versions Probleme (Bei neueren Versionen gibt es möglicherweise Änderungen welche diese Konfiguration nicht mehr ermöglichen)
