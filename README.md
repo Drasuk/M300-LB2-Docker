@@ -1,4 +1,4 @@
-# M300 - Dokumentation von Dennis Allenspach, Jennifer Fischer &amp; Jan Gantenbein
+# M300 - Dokumentation von Jennifer Fischer, Jan Gantenbein &amp; Dennis Allenspach
 Im Modul 300 wurde uns die Arbeit mit Containers und Virtuellen Maschienen näher gebracht.
 ## Auftrag LB2
 In der LB2 ging es darum einen Dienst mit Docker zur Verfügung zu stellen.
@@ -9,9 +9,13 @@ In der LB2 ging es darum einen Dienst mit Docker zur Verfügung zu stellen.
 * Projekt auf github Ablegen und Dokumentieren (Markdown) (Note 5.5 – 6.0)
 
 ## Beschrieb des Service
-Unser Service besteht aus 3 verknüpften Conatiner. Einem Wordpress, MySQL und PHPMyAdmin Servern. Der Service soll die Erstellung einer Webumgebung ersparen bzw. vereinfachen.
+Unser Service besteht aus 3 verknüpften Container. Einem Wordpress, MySQL und PHPMyAdmin Server. Der Service soll die Erstellung einer Webumgebung ersparen bzw. vereinfachen. Die 3 Services wurden mit einem Docker-Compose file kreeiert und wird mittels vagrantfile ausgeführt.
 
 ## Technische Angaben inkl. Plan und Anleitung für den Betrieb
+
+** Netzwerkplan
+
+![Netzwerkplan_Docker](https://github.com/Dionysos376/Docker/edit/master/Netzwerkplan_Docker.png)
 
 ## Testing
 
